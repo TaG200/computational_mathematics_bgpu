@@ -16,7 +16,7 @@ public class task_2 {
     }
 
     public static float inaccuracy(float algorithm, float embedded) {
-        return Math.abs(algorithm - embedded) / Math.abs(algorithm);
+        return Math.abs(algorithm - embedded) / embedded;
     }
 
     public static void main(String[] args) {
