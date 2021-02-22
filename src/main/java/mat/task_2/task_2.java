@@ -1,4 +1,4 @@
-package mat;
+package mat.task_2;
 
 public class task_2 {
 

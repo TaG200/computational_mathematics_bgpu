@@ -1,4 +1,6 @@
-package mat;
+package mat.task_3;
+
+import mat.task_2.task_2;
 
 public class task_3 {
     public static void main(String[] args) {
