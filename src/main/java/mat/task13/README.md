@@ -1,12 +1,17 @@
 Задание 13 Алгебра матриц (лабораторный практикум)
+
 Реализовать алгоритмы матричных операций:
 
 Дано:
 
 double[][] matrix = {
+
 {1, 2, 3},
+
 {4, 5, 6}
+
 };
+
 RealMatrix matrixMat = MatrixUtils.createRealMatrix(matrix);
 
 1.Подпрограмму транспонирования матрицы 
@@ -15,14 +20,18 @@ RealMatrix matrixMat = MatrixUtils.createRealMatrix(matrix);
 
 Выходные данные: транспонированная матрица размерности m x n
 
-case (1):
+
 System.out.println(matrixFormat.format(matrixMat.transpose()));
-break;
+
 
 Результат:
-1   4
-2   5
+
+1   4 
+
+2   5 
+
 3   6
+
 ---
 
 2.Подпрограмму умножения матрицы на число 
@@ -32,12 +41,17 @@ break;
 Выходные данные: матрица – результат умножения числа-множителя на исходную матрицу
 
 System.out.print("Введите число ");
+
 double multiplier = numberOperation.nextDouble();
+
 System.out.println(matrixFormat.format(matrixMat.scalarMultiply(multiplier)));
 
 Результат:
+
 Введите число 2
+
 2   4   6
+
 8   10   12
 
 ---
@@ -49,14 +63,21 @@ System.out.println(matrixFormat.format(matrixMat.scalarMultiply(multiplier)));
 Выходные данные: матрица – результат сложения матриц
 
 double[][] matrix2 = {
+
 {1, 1, 1},
+
 {1, 1, 1}
+
 };
+
 RealMatrix matrixMat2 = MatrixUtils.createRealMatrix(matrix2);
+
 System.out.println(matrixFormat.format(matrixMat.add(matrixMat2)));
 
 Результат:
+
 2   3   4
+
 5   6   7
 
 ---
@@ -68,14 +89,21 @@ System.out.println(matrixFormat.format(matrixMat.add(matrixMat2)));
 Выходные данные: матрица – результат вычитания матриц
 
 double[][] matrix3 = {
+
 {1, 1, 1},
+
 {1, 1, 1}
+
 };
+
 RealMatrix matrixMat3 = MatrixUtils.createRealMatrix(matrix3);
+
 System.out.println(matrixFormat.format(matrixMat.subtract(matrixMat3)));
 
 Результат:
+
 0   1   2
+
 3   4   5
 
 
@@ -88,15 +116,23 @@ System.out.println(matrixFormat.format(matrixMat.subtract(matrixMat3)));
 Выходные данные: матрица  размерности n ´ k – результат умножения матриц
 
 double[][] matrix4 = {
+
 {2, 2},
+
 {2, 2},
+
 {2, 2}
+
 };
+
 RealMatrix matrixMat4 = MatrixUtils.createRealMatrix(matrix4);
+
 System.out.println(matrixFormat.format(matrixMat.multiply(matrixMat4)));
 
 Результат:
+
 12   12
+
 30   30
 
 ---
