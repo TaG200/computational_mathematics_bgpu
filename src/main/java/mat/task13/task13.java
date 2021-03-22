@@ -60,9 +60,14 @@ public class task13 {
                 System.out.println(matrixFormat.format(matrixMat.multiply(matrixMat4)));
                 break;
 
-//            case (6):
-//                System.out.println(matrixFormat.format(matrixMat.));
-//                break;
+           case (6):
+                System.out.println(matrixMat.getNorm());
+                System.out.println(matrixMat.getFrobeniusNorm());
+
+                RealMatrix matrixMat5 = matrixMat.transpose();
+                System.out.println(matrixMat5.getNorm());
+
+                break;
         }
     }
 }

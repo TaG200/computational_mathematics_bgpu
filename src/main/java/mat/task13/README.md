@@ -144,3 +144,22 @@ System.out.println(matrixFormat.format(matrixMat.multiply(matrixMat4)));
 Выходные данные: соответствующая норма матрицы
 
 Результат:
+System.out.println(matrixMat.getNorm());
+
+||·||1 = 9.0
+
+---
+System.out.println(matrixMat.getFrobeniusNorm());
+
+Результат:
+
+||·||e = 9.539392014169456
+
+---
+
+RealMatrix matrixMat5 = matrixMat.transpose();
+System.out.println(matrixMat5.getNorm());
+
+Результат:
+
+||·||∞ = 15.0
