@@ -67,15 +67,33 @@ public class task6 {
     }
 
 
+
+
+    public static double inaccuracy(float pfloat, double pdouble) {
+        return Math.abs(pfloat - pdouble) / pdouble;
+    }
+
     public static void main(String[] args) {
         int n = 1000000;
         task6 classObject = new task6();
-
+        System.out.println("float");
         System.out.println(sumLeftToRight(allValues(n)));
         System.out.println(sumLeftToRight(classObject.subtraction(n).positiveValues) + sumLeftToRight(classObject.subtraction(n).negativeValues));
         System.out.println(sumRightToLeft(allValues(n)));
         System.out.println(sumRightToLeft(classObject.subtraction(n).positiveValues) + sumRightToLeft(classObject.subtraction(n).negativeValues));
 
+        System.out.println("double");
+        System.out.println((double)sumLeftToRight(allValues(n)));
+        System.out.println((double)sumLeftToRight(classObject.subtraction(n).positiveValues) + sumLeftToRight(classObject.subtraction(n).negativeValues));
+        System.out.println((double)sumRightToLeft(allValues(n)));
+        System.out.println((double)sumRightToLeft(classObject.subtraction(n).positiveValues) + sumRightToLeft(classObject.subtraction(n).negativeValues));
+
+        System.out.println("погрешность");
+        System.out.println(inaccuracy(sumLeftToRight(allValues(n)), (double)sumLeftToRight(allValues(n))));
+        System.out.println(inaccuracy(sumLeftToRight(classObject.subtraction(n).positiveValues) + sumLeftToRight(classObject.subtraction(n).negativeValues), (double)sumLeftToRight(classObject.subtraction(n).positiveValues) + sumLeftToRight(classObject.subtraction(n).negativeValues)));
+        System.out.println(inaccuracy(sumRightToLeft(allValues(n)), (double)sumRightToLeft(allValues(n))));
+        System.out.println(inaccuracy(sumRightToLeft(classObject.subtraction(n).positiveValues) + sumRightToLeft(classObject.subtraction(n).negativeValues), (double)sumRightToLeft(classObject.subtraction(n).positiveValues) + sumRightToLeft(classObject.subtraction(n).negativeValues)));
     }
 
 }
+
